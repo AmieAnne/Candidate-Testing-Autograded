@@ -12,7 +12,7 @@ let candidateAnswer = "";
 
 //TODO: Variables for Part 2
 let questions;
-let correctAnswers = '1017';
+let correctAnswers 
 let candidateAnswers;
 
 runProgram ();
