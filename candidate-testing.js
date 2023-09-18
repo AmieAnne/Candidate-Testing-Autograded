@@ -33,10 +33,10 @@ function gradeQuiz(candidateAnswer) {
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 console.log(candidateAnswer)
   if (candidateAnswer == correctAnswer) {
-    console.log("YES! Good job," + candidateName +"! You're on your way to becoming a Pokemon master! :)");
+    console.log("YES! Good job," + candidateName +"! You're on your way to becoming a Pokemon master! 😍");
   }
   else if (candidateAnswer != correctAnswer){
-    console.log("No! Sorry," + candidateName + ", you'll never be a Pokemon Master. :(");
+    console.log("No! Sorry," + candidateName + ", you'll never be a Pokemon Master. 😓");
   }
   
 
