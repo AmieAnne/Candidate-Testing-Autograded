@@ -6,7 +6,7 @@ const input = require('readline-sync');
 let candidateName;
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
 let question;
-let correctAnswer = "1017";
+let correctAnswer = "Sally Ride";
 let candidateAnswer = "";
 
 
@@ -22,7 +22,7 @@ candidateName = (input.question("What is your name? "))}
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-this.candidateAnswer = (input.question("How many Pokemon are there? "))
+this.candidateAnswer = (input.question("Who was the first American woman in space? "))
 
 
 
@@ -33,10 +33,10 @@ function gradeQuiz(candidateAnswer) {
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 console.log(candidateAnswer)
   if (candidateAnswer == correctAnswer) {
-    console.log("YES! Good job," + candidateName +"! You're on your way to becoming a Pokemon master! 😍");
+    console.log("YES! Good job, " + candidateName +".");
   }
   else if (candidateAnswer != correctAnswer){
-    console.log("No! Sorry," + candidateName + ", you'll never be a Pokemon Master. 😓");
+    console.log("No! Sorry," + candidateName);
   }
   
 
