@@ -12,7 +12,7 @@ let candidateAnswer = "";
 
 //TODO: Variables for Part 2
 let questions = ["Who was the first American woman in space? ","True or false: 5 kilometer == 5000 meters? ","(5 + 3)/2 * 10 = ? ","Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ","What is the minimum crew size for the ISS? "];
-let correctAnswers = ["Sally Ride","True",	"40", "Trajectory", "3"]
+let correctAnswers = ["Sally Ride","true",	"40", "Trajectory", "3"]
 let candidateAnswers = [];
 
 runProgram ();
@@ -38,21 +38,31 @@ function gradeQuiz(candidateAnswers) {
   //else if (candidateAnswer != correctAnswer){
   //  console.log("No! Sorry," + candidateName);
   //}
+  let numofCA = 0
+
   for (let i = 0; i < candidateAnswers.length; i++)
   {
-    if (candidateAnswers[i] == correctAnswers[i]) {
-      console.log("YES! Good job, " + candidateName +".");
-      }
-      else if (candidateAnswers[i] != correctAnswers[i]){
 
+    if (candidateAnswers[i].toUpperCase() == correctAnswers[i].toUpperCase()) {
+      console.log("YES! Good job, " + candidateName +".");
+      numofCA++;
+    
+      }
+      else {
       
       console.log("No! Sorry, " + candidateName);
   }}
   
 
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
-
-
+ grade=(numofCA) / (questions.length) * 100
+ console.log(numofCA);
+if (grade >= 80){
+  console.log("Congrats, " +candidateName, "! You Passed!")
+}
+else {
+  console.log("Sorry, " +candidateName, "! Better luck next time.")
+}
   return grade;
 }
 
@@ -62,7 +72,8 @@ function runProgram() {
   // TODO 1.1c: Greet candidate using their name //
    console.log("Hi," + candidateName);
   askQuestion();
-  gradeQuiz(this.candidateAnswer);
+    gradeQuiz(candidateAnswers);
+
 }
 
 // ----------- Don't write any code or change any code below this line ---------- //
